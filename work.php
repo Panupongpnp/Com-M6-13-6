@@ -1,35 +1,5 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<form method="post">
-  <label for="score">กรอกคะแนน:</label>
-  <input type="number" name="score" id="score" required>
-  <input type="submit" value="ตรวจสอบเกรด">
-</form>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $score = $_POST['score'];
-
-    if ($score > 80) {
-        echo "<p>คุณได้เกรด A</p>";
-    } elseif ($score > 70) {
-        echo "<p>คุณได้เกรด B</p>";
-    } elseif ($score > 60) {
-        echo "<p>คุณได้เกรด C</p>";
-    } elseif ($score > 50) {
-        echo "<p>คุณได้เกรด D</p>";
-    } else {
-        echo "<p>คุณได้เกรด F</p>";
-    }
-}
-?>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
 <head>
   <meta charset="UTF-8">
   <title>ตรวจสอบเกรด</title>
